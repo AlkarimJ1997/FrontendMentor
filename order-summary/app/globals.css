@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.bgDesktop {
+		@apply bg-paleBlue bg-[url('/images/pattern-background-desktop.svg')] bg-contain bg-no-repeat;
+	}
+
+	.bgMobile {
+		@apply bg-paleBlue bg-[url('/images/pattern-background-mobile.svg')] bg-contain bg-no-repeat;
+	}
+}
