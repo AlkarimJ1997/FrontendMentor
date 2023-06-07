@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--bgTop: url('/images/bg-pattern-top.svg');
+	--bgBottom: url('/images/bg-pattern-bottom.svg');
+}
+
+@layer components {
+	.bgHero {
+		background-image: var(--bgTop), var(--bgBottom);
+		background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+		background-repeat: no-repeat, no-repeat;
+	}
+}
+
+@media screen and (min-width: 93.75em) {
+	@layer components {
+		.bgHero {
+			background-position: right 66vw bottom 53vh, left 71vw top 65vh;
+		}
+	}
+}
