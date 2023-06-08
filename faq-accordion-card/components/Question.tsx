@@ -1,22 +1,17 @@
-'use client';
-
-import { useState } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 
 interface QuestionProps {
 	question: string;
 	answer: string;
+	isOpen: boolean;
+	onClick: () => void;
 }
 
-const Question = ({ question, answer }: QuestionProps) => {
-	const [isOpen, setIsOpen] = useState<boolean>(false);
-
+const Question = ({ question, answer, isOpen, onClick }: QuestionProps) => {
 	return (
 		<div className='group space-y-2'>
-			<div
-				onClick={() => setIsOpen(openState => !openState)}
-				className='flex cursor-pointer justify-between'>
+			<div onClick={onClick} className='flex cursor-pointer justify-between'>
 				<p
 					className={clsx(
 						'text-[13px] text-veryDarkDesaturatedBlue md:text-sm',
