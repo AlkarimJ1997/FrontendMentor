@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.bgFaq {
+		@apply before:absolute before:left-1/2 before:top-0 before:h-[180px] before:w-[268px] before:translate-x-[-45%] before:translate-y-[-55%] before:bg-[url('/images/illustration-woman-online-mobile.svg')] before:bg-no-repeat after:absolute after:left-1/2 after:top-[6.5rem] after:h-[180px] after:w-[268px] after:translate-x-[-45%] after:translate-y-[-53%] after:bg-[url('/images/bg-pattern-mobile.svg')] after:bg-no-repeat;
+	}
+
+	.bgDesktop {
+		background: url('/images/illustration-woman-online-desktop.svg') bottom
+				3.1rem left -5.1rem no-repeat,
+			url('/images/bg-pattern-desktop.svg') bottom -10rem left -36rem no-repeat;
+		background-color: white;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.bgFaq {
+		@apply before:left-[-1.6%] before:top-[66%] before:h-[190px] before:w-[140px] before:translate-x-[-57%] before:translate-y-[-65%] before:bg-[url('/images/illustration-box-desktop.svg')] before:bg-no-repeat after:hidden;
+	}
+}
